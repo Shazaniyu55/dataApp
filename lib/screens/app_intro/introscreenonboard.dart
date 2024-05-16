@@ -72,7 +72,7 @@ class _IntroScreenOnboardingState extends State<IntroScreenOnboarding> {
                     Container(
                       height: 70,
                       child: CommonWidgets()
-                          .appBar(title: 'Crypto Wallet', hasBack: false),
+                          .appBar(title: 'DataSubscription', hasBack: false),
                       alignment: Alignment.bottomCenter,
                     ),
                   ],

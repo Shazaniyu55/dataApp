@@ -21,18 +21,18 @@ class _SplashScreenState extends State<SplashScreen> {
   final List<Introduction> _list = [
     const Introduction(
       title: 'Secure Wallet',
-      subTitle: 'Secure Your Crypto, Anywhere Anytime',
-      imageUrl: 'asset/svg/certi.svg',
+      subTitle: 'Get Data, Anywhere Anytime',
+      imageUrl: 'images/certi.svg',
     ),
     const Introduction(
       title: 'Exchange',
-      subTitle: 'Swap Crypto with Confidence',
-      imageUrl: 'asset/svg/certi.svg',
+      subTitle: 'Swap Exchange with Confidence',
+      imageUrl: 'images/certi.svg',
     ),
     const Introduction(
-      title: 'All your assets in one Wallet',
+      title: 'Pay Your Bills',
       subTitle: 'Your Wallet, Your Way',
-      imageUrl: 'asset/svg/certi.svg',
+      imageUrl: 'images/certi.svg',
     ),
   ];
   final _appController = Get.find<AppController>();
@@ -95,7 +95,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   AspectRatio(
                     aspectRatio: 290 / 290,
                     child: Image.asset(
-                      'asset/svg/mask.svg',
+                      'images/certi.svg',
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -103,7 +103,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 8,
                   ),
                   Text(
-                    'Crypto Wallet',
+                    'Data Wallet',
                     style: TextStyle(
                       fontFamily: 'sfpro',
                       color: primaryColor.value,
@@ -117,7 +117,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 8,
                   ),
                   Text(
-                    'Digital wallet just got even better',
+                    'Mega Data just got even better',
                     style: TextStyle(
                         fontFamily: 'sfpro',
                         fontStyle: FontStyle.normal,
