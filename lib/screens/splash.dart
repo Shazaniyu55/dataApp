@@ -1,5 +1,6 @@
 import 'package:dataapp/constant/constant.dart';
 import 'package:dataapp/helper/navigator.dart';
+import 'package:dataapp/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual);
     Future.delayed(const Duration(seconds: 6), () {
       //change the screen to the next screen
-      changeScreenReplacement(context, widget);
+      changeScreenReplacement(context, SignUp());
     });
   }
 
