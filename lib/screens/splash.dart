@@ -22,17 +22,17 @@ class _SplashScreenState extends State<SplashScreen> {
     const Introduction(
       title: 'Secure Wallet',
       subTitle: 'Get Data, Anywhere Anytime',
-      imageUrl: 'images/certi.svg',
+      imageUrl: 'images/happy.jpg',
     ),
     const Introduction(
       title: 'Exchange',
       subTitle: 'Swap Exchange with Confidence',
-      imageUrl: 'images/certi.svg',
+      imageUrl: 'images/con1.jpg',
     ),
     const Introduction(
       title: 'Pay Your Bills',
       subTitle: 'Your Wallet, Your Way',
-      imageUrl: 'images/certi.svg',
+      imageUrl: 'images/con2.jpg',
     ),
   ];
   final _appController = Get.find<AppController>();
@@ -95,7 +95,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   AspectRatio(
                     aspectRatio: 290 / 290,
                     child: Image.asset(
-                      'images/certi.svg',
+                      'images/happy.jpg',
                       fit: BoxFit.contain,
                     ),
                   ),
