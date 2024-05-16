@@ -1,23 +1,42 @@
+import 'package:dataapp/controller/appController.dart';
 import 'package:dataapp/screens/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
+  final appController = Get.put(AppController());
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const SplashScreen(),
-    );
+    return GetMaterialApp(
+        title: 'DataSubcription App',
+        theme: ThemeData(
+            primaryColor: const Color(0xff27C19F),
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+              backgroundColor: Color(0xff27C19F),
+            )),
+        builder: (context, child) {
+          return ScrollConfiguration(
+            behavior: MyBehavior(),
+            child: child!,
+          );
+        },
+        debugShowCheckedModeBanner: false,
+        transitionDuration: const Duration(milliseconds: 500),
+        defaultTransition: Transition.rightToLeftWithFade,
+        home: const SplashScreen());
+  }
+}
+
+class MyBehavior extends ScrollBehavior {
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }
