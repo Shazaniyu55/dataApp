@@ -12,6 +12,7 @@ import 'package:dataapp/widgets/commonwidget.dart';
 import 'package:dataapp/widgets/inputField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -70,9 +71,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SvgPicture.asset(
-                        "assets/svgs/logo.svg",
+                      Image.asset(
+                        "images/logo.png",
                         color: primaryColor.value,
+                        width: 50,
+                        height: 50,
                       )
                     ],
                   ),
@@ -82,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   InputFieldsWithSeparateIcon(
                     headerText: "Email",
                     hintText: "Email Address",
-                    svg: 'email (3)',
+                    svg: 'email',
                     onChange: (val) {
                       if (val != null && val != '') {
                         emailErr.value = '';
@@ -94,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   CommonWidgets.showErrorMessage(emailErr.value),
                   InputFieldPassword(
                     headerText: "Password",
-                    svg: 'Lock',
+                    svg: 'key',
                     hintText: '• • • • • • • •',
                     onChange: (val) {
                       if (val != null && val != '') {

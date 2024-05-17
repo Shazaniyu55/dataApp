@@ -95,8 +95,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   AspectRatio(
                     aspectRatio: 290 / 290,
                     child: Image.asset(
-                      'images/happy.jpg',
+                      'images/logo.png',
                       fit: BoxFit.contain,
+                      color: primaryColor.value,
+                      width: 150,
                     ),
                   ),
                   const SizedBox(

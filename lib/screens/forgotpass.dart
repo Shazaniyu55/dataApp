@@ -8,6 +8,7 @@ import 'package:dataapp/widgets/bottomrectangularbtn.dart';
 import 'package:dataapp/widgets/commonwidget.dart';
 import 'package:dataapp/widgets/inputField.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
@@ -55,10 +56,11 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                               color: headingColor.value,
                             )),
                       ),
-                      SvgPicture.asset(
-                        "assets/images/splash.svg",
+                      Image.asset(
+                        "images/logo.png",
                         height: 44,
                         width: 48,
+                        color: primaryColor.value,
                       )
                     ],
                   ),
@@ -88,7 +90,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     onChange: (val) {
                       emailErr.value = '';
                     },
-                    svg: 'email (3)',
+                    svg: 'email',
                     hasHeader: true,
                     hintText: 'Email Address',
                   ),

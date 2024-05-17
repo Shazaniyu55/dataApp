@@ -80,7 +80,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   InputFieldsWithSeparateIcon(
                     headerText: "First name",
                     hintText: "First name",
-                    svg: 'userfield (2)',
+                    svg: 'user',
                     onChange: (val) {
                       if (val != null && val != '') {
                         fNameError.value = '';
@@ -93,7 +93,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   InputFieldsWithSeparateIcon(
                     headerText: "Last name",
                     hintText: "Last name",
-                    svg: 'userfield (2)',
+                    svg: 'user',
                     onChange: (val) {
                       if (val != null && val != '') {
                         lNameError.value = '';
@@ -106,7 +106,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   InputFieldsWithSeparateIcon(
                     headerText: "Email",
                     hintText: "Email Address",
-                    svg: 'email (3)',
+                    svg: 'email',
                     onChange: (val) {
                       if (val != null && val != '') {
                         emailError.value = '';
@@ -118,7 +118,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   CommonWidgets.showErrorMessage(emailError.value),
                   InputFieldPassword(
                     headerText: "Password",
-                    svg: 'Lock',
+                    svg: 'pass',
                     hintText: "********",
                     onChange: (value) {
                       if (value != null && value != '') {
@@ -130,7 +130,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   CommonWidgets.showErrorMessage(passError.value),
                   InputFieldPassword(
                     headerText: "Confirm Password",
-                    svg: 'Lock',
+                    svg: 'pass',
                     hintText: "********",
                     onChange: (value) {
                       if (value != null && value != '') {

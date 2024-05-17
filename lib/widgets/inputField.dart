@@ -151,15 +151,16 @@ class _InputFieldPasswordState extends State<InputFieldPassword> {
                 width: 60,
                 height: 58,
                 decoration: BoxDecoration(
-                  color: inputFieldBackgroundColor.value,
+                  color: bg2CintainerColor,
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
                 ),
                 child: Center(
                   child: Image.asset(
-                    'assets/svgs/${widget.svg}.png',
-                    color: headingColor.value,
+                    'images/${widget.svg}.png',
+                    width: 20,
+                    height: 20,
                   ),
                 ),
               ),
@@ -291,15 +292,14 @@ class InputFieldsWithSeparateIcon extends StatelessWidget {
                 width: 60,
                 height: 58,
                 decoration: BoxDecoration(
-                  color: inputFieldBackgroundColor.value,
+                  color: bg2CintainerColor,
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
                 ),
                 child: Center(
                   child: Image.asset(
-                    'assets/svgs/$svg.png',
-                    color: headingColor.value,
+                    'images/$svg.png',
                     width: 20,
                     height: 20,
                   ),

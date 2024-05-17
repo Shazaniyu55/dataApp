@@ -75,7 +75,7 @@ class _DashboardState extends State<Dashboard> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Available Balance',
+                                  'Wallet Balance',
                                   style: TextStyle(
                                     fontFamily: 'sfpro',
                                     color: lightColor,
@@ -88,7 +88,7 @@ class _DashboardState extends State<Dashboard> {
                                   height: 20,
                                 ),
                                 Text(
-                                  '${23330.0}',
+                                  '₦${0.0}',
                                   style: TextStyle(
                                     fontFamily: 'sfpro',
                                     color: lightColor,
@@ -118,12 +118,15 @@ class _DashboardState extends State<Dashboard> {
                         //constraints: BoxConstraints(minHeight: Get.height - 240, minWidth: Get.width),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             const SizedBox(
                               height: 60,
                             ),
                             Container(
                                 child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Card(
                                   margin: const EdgeInsets.only(right: 10),
@@ -150,7 +153,7 @@ class _DashboardState extends State<Dashboard> {
                                             backgroundColor: Colors.amber,
                                             child: ClipOval(
                                               child: Image.asset(
-                                                "images/data.png",
+                                                "images/phone.png",
                                                 fit: BoxFit.cover,
                                                 width: 44.0,
                                                 height: 44.0,
@@ -159,7 +162,7 @@ class _DashboardState extends State<Dashboard> {
                                           ),
                                         ),
                                         const Text(
-                                          "Network",
+                                          "Buy Airtime",
                                         ),
                                       ],
                                     ),
@@ -190,7 +193,7 @@ class _DashboardState extends State<Dashboard> {
                                             backgroundColor: Colors.amber,
                                             child: ClipOval(
                                               child: Image.asset(
-                                                "images/data.png",
+                                                "images/wifi.png",
                                                 fit: BoxFit.cover,
                                                 width: 44.0,
                                                 height: 44.0,
@@ -199,14 +202,198 @@ class _DashboardState extends State<Dashboard> {
                                           ),
                                         ),
                                         const Text(
-                                          "Network",
+                                          "Buy Data",
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Card(
+                                  margin: const EdgeInsets.only(right: 10),
+                                  child: Container(
+                                    padding: const EdgeInsets.all(16),
+                                    width: 100,
+                                    height: 100,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Theme.of(context).cardColor,
+                                    ),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                                color: const Color(0xffD8D9E4)),
+                                          ),
+                                          child: CircleAvatar(
+                                            radius: 22.0,
+                                            backgroundColor: Colors.amber,
+                                            child: ClipOval(
+                                              child: Image.asset(
+                                                "images/wifi.png",
+                                                fit: BoxFit.cover,
+                                                width: 44.0,
+                                                height: 44.0,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        const Text(
+                                          "Buy Data",
                                         ),
                                       ],
                                     ),
                                   ),
                                 ),
                               ],
-                            ))
+                            )),
+
+                            //next row section
+                            Container(
+                              child: Row(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Card(
+                                        margin:
+                                            const EdgeInsets.only(right: 10),
+                                        child: Container(
+                                          padding: const EdgeInsets.all(16),
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Theme.of(context).cardColor,
+                                          ),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(
+                                                      color: const Color(
+                                                          0xffD8D9E4)),
+                                                ),
+                                                child: CircleAvatar(
+                                                  radius: 22.0,
+                                                  backgroundColor: Colors.amber,
+                                                  child: ClipOval(
+                                                    child: Image.asset(
+                                                      "images/phone.png",
+                                                      fit: BoxFit.cover,
+                                                      width: 44.0,
+                                                      height: 44.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              const Text(
+                                                "Buy Airtime",
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      Card(
+                                        margin:
+                                            const EdgeInsets.only(right: 10),
+                                        child: Container(
+                                          padding: const EdgeInsets.all(16),
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Theme.of(context).cardColor,
+                                          ),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(
+                                                      color: const Color(
+                                                          0xffD8D9E4)),
+                                                ),
+                                                child: CircleAvatar(
+                                                  radius: 22.0,
+                                                  backgroundColor: Colors.amber,
+                                                  child: ClipOval(
+                                                    child: Image.asset(
+                                                      "images/wifi.png",
+                                                      fit: BoxFit.cover,
+                                                      width: 44.0,
+                                                      height: 44.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              const Text(
+                                                "Buy Data",
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      Card(
+                                        margin:
+                                            const EdgeInsets.only(right: 10),
+                                        child: Container(
+                                          padding: const EdgeInsets.all(16),
+                                          width: 100,
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(10),
+                                            color: Theme.of(context).cardColor,
+                                          ),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: <Widget>[
+                                              Container(
+                                                decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  border: Border.all(
+                                                      color: const Color(
+                                                          0xffD8D9E4)),
+                                                ),
+                                                child: CircleAvatar(
+                                                  radius: 22.0,
+                                                  backgroundColor: Colors.amber,
+                                                  child: ClipOval(
+                                                    child: Image.asset(
+                                                      "images/wifi.png",
+                                                      fit: BoxFit.cover,
+                                                      width: 44.0,
+                                                      height: 44.0,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              const Text(
+                                                "Buy Data",
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
                           ],
                         ),
                       ),
