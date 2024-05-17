@@ -4,7 +4,6 @@ import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class InputFields extends StatelessWidget {
@@ -158,8 +157,8 @@ class _InputFieldPasswordState extends State<InputFieldPassword> {
                       bottomLeft: Radius.circular(8)),
                 ),
                 child: Center(
-                  child: SvgPicture.asset(
-                    'assets/svgs/${widget.svg}.svg',
+                  child: Image.asset(
+                    'assets/svgs/${widget.svg}.png',
                     color: headingColor.value,
                   ),
                 ),
@@ -298,8 +297,8 @@ class InputFieldsWithSeparateIcon extends StatelessWidget {
                       bottomLeft: Radius.circular(8)),
                 ),
                 child: Center(
-                  child: SvgPicture.asset(
-                    'assets/svgs/$svg.svg',
+                  child: Image.asset(
+                    'assets/svgs/$svg.png',
                     color: headingColor.value,
                     width: 20,
                     height: 20,

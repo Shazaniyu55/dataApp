@@ -2,6 +2,7 @@
 
 import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
+import 'package:dataapp/model/walletBalace.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
@@ -179,6 +180,189 @@ class CommonWidgets {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  Future selectWithdrawBottomSheet(BuildContext context,
+      {Balance? selectedToken}) {
+    return Get.bottomSheet(
+      isScrollControlled: true,
+      backgroundColor: primaryBackgroundColor.value,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      Obx(
+        () => Container(
+          width: Get.width,
+          //color: primaryBackgroundColor.value,
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Utility",
+                    style: TextStyle(
+                        fontFamily: 'sfpro',
+                        fontStyle: FontStyle.normal,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 26.0,
+                        letterSpacing: 0.44,
+                        color: headingColor.value),
+                  ),
+                  InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.clear,
+                        color: headingColor.value,
+                      ))
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Please select a method to continue",
+                style: TextStyle(
+                    fontFamily: 'sfpro',
+                    fontStyle: FontStyle.normal,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14.0,
+                    letterSpacing: 0.44,
+                    color: placeholderColor),
+              ),
+              const SizedBox(
+                height: 36,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  InkWell(
+                    onTap: () {
+                      Get.back();
+                      // Get.to(const ChooseToken(fromPage: 'send',));
+                      //Get.to(WithdrawUSDT(selectedToken: selectedCoin.value,));
+                    },
+                    child: Container(
+                      height: 100,
+                      width: 112,
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          color: primaryColor.value.withOpacity(0.06),
+                          //border: Border.all(color: primaryColor.value,width: 1),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset("images/9mobile.png"),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            "9mobile",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: inputFieldTextColor.value,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "sfpro",
+                                height: 1.40),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.back();
+                      //CommonWidgets().buildBottomSheetWithDrawBank(context);
+                      // Get.to(const WithdrawFiat());
+                    },
+                    child: Container(
+                      height: 100,
+                      width: 112,
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: primaryColor.value.withOpacity(0.06),
+                          //border: Border.all(color: primaryColor.value,width: 1),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset("images/glo.png"),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            "Glo",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: inputFieldTextColor.value,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "sfpro",
+                                height: 1.40),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.back();
+                      //CommonWidgets().buildBottomSheetWithDrawBank(context);
+                      // Get.to(const WithdrawFiat());
+                    },
+                    child: Container(
+                      height: 100,
+                      width: 112,
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: primaryColor.value.withOpacity(0.06),
+                          //border: Border.all(color: primaryColor.value,width: 1),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset("images/airtel.png"),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            "Airtel",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: inputFieldTextColor.value,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "sfpro",
+                                height: 1.40),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ]),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

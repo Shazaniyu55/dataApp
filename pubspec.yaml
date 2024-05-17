@@ -41,7 +41,8 @@ dependencies:
   shared_preferences: ^2.2.3
   fluttertoast: ^8.2.5
   decimal: ^2.3.3
-  flutter_custom_tabs: ^2.0.0+1
+  flutter_custom_tabs: ^1.0.4
+  animated_custom_dropdown: ^1.5.0
 
 dev_dependencies:
   flutter_test:

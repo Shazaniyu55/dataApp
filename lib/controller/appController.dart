@@ -1,8 +1,7 @@
 // ignore_for_file: file_names, library_prefixes
-
 import 'package:dataapp/constant/colors.dart';
+import 'package:dataapp/model/walletBalace.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 
 class AppController extends GetxController {
@@ -25,6 +24,9 @@ class AppController extends GetxController {
   var changePassLoader = false.obs;
   var createNewWalletLoader = false.obs;
   var importWalletLoader = false.obs;
+
+  var userBalance = WalletBalanceModel().obs;
+  var password = ''.obs;
 
   var getSwapTransactionsLoader = false.obs;
   var swapLoader = false.obs;

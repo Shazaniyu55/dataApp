@@ -145,7 +145,7 @@ class _IntroScreenOnboardingState extends State<IntroScreenOnboarding> {
                                             horizontal: 30),
                                         child: BottomRectangularBtn(
                                           onTapFunc: () {
-                                            Get.to(const SignUp());
+                                            Get.to(const SignupScreen());
                                           },
                                           btnTitle: 'Continue',
                                         ),
