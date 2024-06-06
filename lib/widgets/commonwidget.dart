@@ -208,7 +208,7 @@ class CommonWidgets {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Utility",
+                    "Fund Wallet",
                     style: TextStyle(
                         fontFamily: 'sfpro',
                         fontStyle: FontStyle.normal,
@@ -264,12 +264,12 @@ class CommonWidgets {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset("images/9mobile.png"),
+                          Image.asset("images/paystack.png"),
                           const SizedBox(
                             height: 5,
                           ),
                           Text(
-                            "9mobile",
+                            "Paystack",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: inputFieldTextColor.value,
@@ -302,12 +302,16 @@ class CommonWidgets {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset("images/glo.png"),
+                          Image.asset(
+                            "images/monify.png",
+                            width: 100,
+                            height: 60,
+                          ),
                           const SizedBox(
                             height: 5,
                           ),
                           Text(
-                            "Glo",
+                            "Monnify",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: inputFieldTextColor.value,
@@ -340,12 +344,12 @@ class CommonWidgets {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset("images/airtel.png"),
+                          Image.asset("images/bank.png"),
                           const SizedBox(
                             height: 5,
                           ),
                           Text(
-                            "Airtel",
+                            "Bank",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: inputFieldTextColor.value,

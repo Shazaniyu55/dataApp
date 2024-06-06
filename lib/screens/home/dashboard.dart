@@ -229,7 +229,7 @@ class _DashboardState extends State<Dashboard> {
                           ),
                           const SizedBox(width: 20),
                           _dashBTns(
-                            svg: 'util',
+                            svg: 'transac',
                             btnText: 'Transactions',
                             onTap: () {
                               String address;
@@ -256,7 +256,7 @@ class _DashboardState extends State<Dashboard> {
                             },
                           ),
                           _dashBTns(
-                            svg: 'call',
+                            svg: 'sum',
                             btnText: 'Wallet Summary',
                             onTap: () {
                               CommonWidgets()
