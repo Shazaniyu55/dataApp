@@ -1,5 +1,5 @@
-import 'package:dataapp/constant/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:dataapp/constant/colors.dart';
 
 class Introduction extends StatefulWidget {
   final String imageUrl;
@@ -54,13 +54,13 @@ class IntroductionState extends State<Introduction> {
                 widget.title,
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.clip,
-                style: const TextStyle(
+                style:  TextStyle(
                     fontFamily: "sfpro",
                     fontStyle: FontStyle.normal,
                     fontWeight: FontWeight.w600,
                     fontSize: 26.0,
                     letterSpacing: 0.36,
-                    color: COLOR_ACCENT),
+                    color: primaryColor.value),
               ),
             ],
           ),
@@ -69,8 +69,8 @@ class IntroductionState extends State<Introduction> {
           ),
           Text(
             widget.subTitle,
-            style: const TextStyle(
-                fontSize: 16, fontFamily: "sfpro", color: COLOR_ACCENT),
+            style:  TextStyle(
+                fontSize: 16, fontFamily: "sfpro", color: primaryColor.value),
             overflow: TextOverflow.clip,
             textAlign: TextAlign.center,
           ),

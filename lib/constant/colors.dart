@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
-var primaryColor = const Color(0xffF9895E).obs;
+var primaryColor = const Color.fromARGB(255, 66, 99, 231).obs;
 var primaryBackgroundColor = const Color(0xFFFFFFFF).obs;
 var dividerColor = const Color(0xFFF2F2F2).obs;
 var headingColor = const Color(0xFF030319).obs;
@@ -18,18 +18,18 @@ Color errorTxtColor = const Color(0xFFFF0E41);
 Color lightColor = const Color(0xFFFCFCFC);
 var cardColor = const Color(0xFFFFFFFF).obs;
 var greenCardColor = const Color(0xFF39B171).obs;
-var redCardColor = const Color(0xFFF16464).obs;
-var chipChoiceColor = const Color(0xFFF9895E).withOpacity(0.1);
+var redCardColor = const Color.fromARGB(255, 85, 168, 240).obs;
+var chipChoiceColor = const Color.fromARGB(255, 130, 148, 237).withOpacity(0.1);
 var bSheetbtnColor = const Color(0x0DF9895E).withOpacity(0.10);
 var appBgGradient = const LinearGradient(
   begin: Alignment(0.0, 0.0),
   end: Alignment(0, -1),
-  colors: [Color(0xffDB9B3A), Color(0xffFE8664)],
+  colors: [Color.fromARGB(255, 95, 176, 222), Color.fromARGB(255, 37, 98, 222)],
 );
 
 ///////////history screen colors//////////////
 var bgCintainerColor = const Color(0xff27C19F);
-var bg2CintainerColor = const Color(0xffFED5D5);
+var bg2CintainerColor = const Color.fromARGB(255, 79, 141, 241);
 var iconUpColor = const Color(0xffE34446);
 
 var iconDownColor = const Color(0xff0C9D7D);

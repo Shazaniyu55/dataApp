@@ -105,7 +105,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     height: 8,
                   ),
                   Text(
-                    'Data Wallet',
+                    'DataEase',
                     style: TextStyle(
                       fontFamily: 'sfpro',
                       color: primaryColor.value,
