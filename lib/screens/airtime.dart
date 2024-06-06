@@ -15,7 +15,6 @@ class AirtimeScreen extends StatefulWidget {
 }
 
 class _AirtimeScreenState extends State<AirtimeScreen> {
-  final _form = GlobalKey<FormState>();
   AppController appController = Get.find<AppController>();
   TextEditingController _phoneContoller = TextEditingController();
   TextEditingController _amount = TextEditingController();

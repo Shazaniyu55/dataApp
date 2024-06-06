@@ -72,7 +72,7 @@ class _IntroScreenOnboardingState extends State<IntroScreenOnboarding> {
                     Container(
                       height: 70,
                       child: CommonWidgets()
-                          .appBar(title: 'DataSubscription', hasBack: false),
+                          .appBar(title: 'DataEase', hasBack: false),
                       alignment: Alignment.bottomCenter,
                     ),
                   ],

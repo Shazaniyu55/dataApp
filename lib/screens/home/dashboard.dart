@@ -6,6 +6,7 @@ import 'package:dataapp/helper/navigator.dart';
 import 'package:dataapp/model/walletBalace.dart';
 import 'package:dataapp/screens/airtime.dart';
 import 'package:dataapp/screens/choosetoken/choosetoken.dart';
+import 'package:dataapp/screens/profile.dart';
 import 'package:dataapp/widgets/commonwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -85,25 +86,31 @@ class _DashboardState extends State<Dashboard> {
                   ),
                 ),
               ),
-              const ListTile(
-                leading: Icon(
+              ListTile(
+                leading: const Icon(
                   Icons.person_3,
+                  color: Colors.blueAccent,
                   size: 30,
                 ),
-                title: Text("Profile"),
+                title: const Text("Profile"),
+                onTap: () {
+                  changeScreen(context, const Profile());
+                },
               ),
               const SizedBox(height: 10),
               const ListTile(
                 leading: Icon(
-                  Icons.wallet,
+                  Icons.chat_bubble,
+                  color: Colors.blueAccent,
                   size: 30,
                 ),
-                title: Text("Wallet"),
+                title: Text("Chat"),
               ),
               const SizedBox(height: 10),
               ListTile(
                 leading: const Icon(
                   Icons.exit_to_app,
+                  color: Colors.blueAccent,
                   size: 30,
                 ),
                 title: const Text("Log out"),
@@ -232,36 +239,13 @@ class _DashboardState extends State<Dashboard> {
                             svg: 'transac',
                             btnText: 'Transactions',
                             onTap: () {
-                              String address;
-                              Get.to(const ChooseToken(fromPage: 'receive'))
-                                  ?.then((value) {
-                                if (value != null) {
-                                  address = (value.networkName == 'Tron')
-                                      ? (appController.userBalance.value.wallet
-                                              ?.tronAddress ??
-                                          '')
-                                      : (value.networkName == 'Bitcoin' ||
-                                              value.networkName ==
-                                                  'Bitcoin (Testnet)')
-                                          ? (appController.userBalance.value
-                                                  .wallet?.btcAddress ??
-                                              '')
-                                          : (appController.userBalance.value
-                                                  .wallet?.evmAddress ??
-                                              '');
-                                  _qrBottomSheet(
-                                      context, address, value.symbol);
-                                }
-                              });
+                              Get.to(const ChooseToken(fromPage: 'receive'));
                             },
                           ),
                           _dashBTns(
                             svg: 'sum',
                             btnText: 'Wallet Summary',
-                            onTap: () {
-                              CommonWidgets()
-                                  .selectWithdrawBottomSheet(context);
-                            },
+                            onTap: () {},
                           ),
                         ],
                       ),
@@ -357,56 +341,6 @@ class _DashboardState extends State<Dashboard> {
           ),
         ),
       ),
-    );
-  }
-
-  void _qrBottomSheet(BuildContext context, String address, String symbol) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (context) {
-        return DraggableScrollableSheet(
-          initialChildSize: 0.4,
-          minChildSize: 0.3,
-          maxChildSize: 0.8,
-          builder: (BuildContext context, ScrollController scrollController) {
-            return Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Theme.of(context).canvasColor,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  topRight: Radius.circular(20),
-                ),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    'Receive $symbol',
-                    style: Theme.of(context).textTheme.headline6,
-                  ),
-                  const SizedBox(height: 16),
-                  Container(
-                    width: 200,
-                    height: 200,
-                    child: Image.network(
-                      'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=$address',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    'Address: $address',
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
     );
   }
 }
