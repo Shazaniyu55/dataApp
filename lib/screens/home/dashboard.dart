@@ -4,7 +4,9 @@ import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
 import 'package:dataapp/model/walletBalace.dart';
 import 'package:dataapp/screens/airtime.dart';
-import 'package:dataapp/screens/choosetoken/choosetoken.dart';
+import 'package:dataapp/screens/cable.dart';
+import 'package:dataapp/screens/choosetoken/transactionsmmary.dart';
+import 'package:dataapp/screens/choosetoken/walletsummary.dart';
 import 'package:dataapp/screens/data.dart';
 import 'package:dataapp/screens/listvendors.dart';
 import 'package:dataapp/screens/profile.dart';
@@ -201,8 +203,10 @@ class _DashboardState extends State<Dashboard> {
                                 }),
                                 _buildCard(context, "images/light.png", "Bills",
                                     () {}),
-                                _buildCard(
-                                    context, "images/tv.png", "Cable", () {}),
+                                _buildCard(context, "images/tv.png", "Cable",
+                                    () {
+                                  Get.to(const CableScreen());
+                                }),
                                 _buildCard(context, "images/bet.png", "Betting",
                                     () {}),
                               ],
@@ -243,14 +247,14 @@ class _DashboardState extends State<Dashboard> {
                             svg: 'transac',
                             btnText: 'Transactions',
                             onTap: () {
-                              Get.to(const ChooseToken(fromPage: 'receive'));
+                              Get.to(const TransactionSummary());
                             },
                           ),
                           _dashBTns(
                             svg: 'sum',
                             btnText: 'Wallet Summary',
                             onTap: () {
-                              Get.to(const ChooseToken());
+                              Get.to(const WalletSummary());
                             },
                           ),
                         ],

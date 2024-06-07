@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, sort_child_properties_last
+
 import 'package:dataapp/screens/chat.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -94,6 +96,19 @@ class _ListOfVendorsState extends State<ListOfVendors> {
                 ),
               ),
             ),
+            ElevatedButton(
+                onPressed: () {},
+                child: const Text("Send request"),
+                style: ElevatedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.blue, // Text color
+                  shadowColor: Colors.grey, // Shadow color
+                  elevation: 5, // Elevation
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12)),
+                ))
           ],
         ),
       ),

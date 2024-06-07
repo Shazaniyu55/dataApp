@@ -31,9 +31,26 @@ class _DataScreenState extends State<DataScreen> {
 
   final List<Map<String, String>> _dropdownItemsDataPlans = [
     {"val": "1", "plans": "500MB(Gift)-30Days"},
-    {"val": "2", "plans": "500MB(Gift)-30Days"},
-    {"val": "3", "plans": "500MB(Gift)-30Days"},
-    {"val": "4", "plans": "500MB(Gift)-30Days"},
+    {"val": "2", "plans": "1GB(Gift)-30Days"},
+    {"val": "3", "plans": "2GB(Gift)-30Days"},
+    {"val": "4", "plans": "3GB(Gift)-30Days"},
+    {"val": "5", "plans": "5GB(Gift)-30Days"},
+    {"val": "6", "plans": "10GB(Gift)-30Days"},
+    {"val": "7", "plans": "15GB(Gift)-30Days"},
+    {"val": "8", "plans": "500MB-30Days"},
+    {"val": "9", "plans": "1GB-30Days"},
+    {"val": "10", "plans": "2GB-30Days"},
+    {"val": "11", "plans": "3GB-30Days"},
+    {"val": "12", "plans": "5GB-30Days"},
+    {"val": "13", "plans": "10GB-30Days"},
+    {"val": "14", "plans": "40GB-30Days"},
+    {"val": "15", "plans": "750MB-14Days"},
+    {"val": "16", "plans": "1.5GB-30Days"},
+    {"val": "17", "plans": "2GB-2Days"},
+    {"val": "18", "plans": "4.5GB-30Days"},
+    {"val": "19", "plans": "2.5GB-30Days"},
+    {"val": "20", "plans": "11GB-30Days"},
+    {"val": "21", "plans": "15GB-30Days"},
   ];
 
   @override

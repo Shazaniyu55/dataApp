@@ -6,15 +6,15 @@ import 'package:dataapp/widgets/commonwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ChooseToken extends StatefulWidget {
-  const ChooseToken({Key? key, this.fromPage}) : super(key: key);
+class WalletSummary extends StatefulWidget {
+  const WalletSummary({Key? key, this.fromPage}) : super(key: key);
   final String? fromPage;
 
   @override
-  State<ChooseToken> createState() => _ChooseTokenState();
+  State<WalletSummary> createState() => _WalletSummaryState();
 }
 
-class _ChooseTokenState extends State<ChooseToken> {
+class _WalletSummaryState extends State<WalletSummary> {
   final appController = Get.find<AppController>();
 
   @override
@@ -36,7 +36,7 @@ class _ChooseTokenState extends State<ChooseToken> {
                 height: 110,
                 padding: const EdgeInsets.only(top: 70),
                 child: CommonWidgets()
-                    .appBar(hasBack: true, title: "Transaction Summary"),
+                    .appBar(hasBack: true, title: "Wallet Summary"),
               ),
               Expanded(
                 child: Container(
@@ -58,7 +58,7 @@ class _ChooseTokenState extends State<ChooseToken> {
                       Row(
                         children: [
                           Text(
-                            'Transactions',
+                            'Wallet',
                             style: TextStyle(
                               color: headingColor.value,
                               fontFamily: 'sfpro',
