@@ -4,10 +4,12 @@ import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
 import 'package:dataapp/model/walletBalace.dart';
 import 'package:dataapp/screens/airtime.dart';
+import 'package:dataapp/screens/betting.dart';
 import 'package:dataapp/screens/cable.dart';
 import 'package:dataapp/screens/choosetoken/transactionsmmary.dart';
 import 'package:dataapp/screens/choosetoken/walletsummary.dart';
 import 'package:dataapp/screens/data.dart';
+import 'package:dataapp/screens/electricity.dart';
 import 'package:dataapp/screens/listvendors.dart';
 import 'package:dataapp/screens/profile.dart';
 import 'package:dataapp/widgets/commonwidget.dart';
@@ -202,13 +204,17 @@ class _DashboardState extends State<Dashboard> {
                                   Get.to(const DataScreen());
                                 }),
                                 _buildCard(context, "images/light.png", "Bills",
-                                    () {}),
+                                    () {
+                                  Get.to(const ElectricScreen());
+                                }),
                                 _buildCard(context, "images/tv.png", "Cable",
                                     () {
                                   Get.to(const CableScreen());
                                 }),
                                 _buildCard(context, "images/bet.png", "Betting",
-                                    () {}),
+                                    () {
+                                  Get.to(const BettingScreen());
+                                }),
                               ],
                             ),
                           ],
