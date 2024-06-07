@@ -2,10 +2,11 @@
 
 import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
-import 'package:dataapp/helper/navigator.dart';
 import 'package:dataapp/model/walletBalace.dart';
 import 'package:dataapp/screens/airtime.dart';
 import 'package:dataapp/screens/choosetoken/choosetoken.dart';
+import 'package:dataapp/screens/data.dart';
+import 'package:dataapp/screens/listvendors.dart';
 import 'package:dataapp/screens/profile.dart';
 import 'package:dataapp/widgets/commonwidget.dart';
 import 'package:flutter/material.dart';
@@ -94,17 +95,20 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 title: const Text("Profile"),
                 onTap: () {
-                  changeScreen(context, const Profile());
+                  Get.to(const Profile());
                 },
               ),
               const SizedBox(height: 10),
-              const ListTile(
-                leading: Icon(
-                  Icons.chat_bubble,
+              ListTile(
+                leading: const Icon(
+                  Icons.chat,
                   color: Colors.blueAccent,
                   size: 30,
                 ),
-                title: Text("Chat"),
+                title: const Text("Chat"),
+                onTap: () {
+                  Get.to(const ListOfVendors());
+                },
               ),
               const SizedBox(height: 10),
               ListTile(
@@ -114,7 +118,7 @@ class _DashboardState extends State<Dashboard> {
                   size: 30,
                 ),
                 title: const Text("Log out"),
-                onTap: () async {},
+                onTap: () {},
               ),
             ],
           ),
@@ -189,18 +193,18 @@ class _DashboardState extends State<Dashboard> {
                               children: [
                                 _buildCard(
                                     context, "images/phone.png", "Airtime", () {
-                                  changeScreen(context, const AirtimeScreen());
+                                  Get.to(const AirtimeScreen());
                                 }),
-                                _buildCard(context, "images/data.png",
-                                    "Buy Data", () {}),
+                                _buildCard(
+                                    context, "images/data.png", "Buy Data", () {
+                                  Get.to(const DataScreen());
+                                }),
                                 _buildCard(context, "images/light.png", "Bills",
                                     () {}),
                                 _buildCard(
                                     context, "images/tv.png", "Cable", () {}),
-                                _buildCard(context, "images/data.png",
-                                    "Buy Data", () {}),
-                                _buildCard(context, "images/print.png",
-                                    "Recharge", () {}),
+                                _buildCard(context, "images/bet.png", "Betting",
+                                    () {}),
                               ],
                             ),
                           ],
@@ -245,7 +249,9 @@ class _DashboardState extends State<Dashboard> {
                           _dashBTns(
                             svg: 'sum',
                             btnText: 'Wallet Summary',
-                            onTap: () {},
+                            onTap: () {
+                              Get.to(const ChooseToken());
+                            },
                           ),
                         ],
                       ),

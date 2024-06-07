@@ -11,7 +11,10 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Colors.blueAccent,
+          title: const Text("Profile"),
+        ),
         body: CustomScaffold(
           child: Column(
             children: [
