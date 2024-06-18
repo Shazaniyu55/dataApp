@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_final_fields
+
 import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
 import 'package:dataapp/widgets/bottomrectangularbtn.dart';
@@ -14,6 +16,7 @@ class ElectricScreen extends StatefulWidget {
 
 class _ElectricScreenState extends State<ElectricScreen> {
   AppController appController = Get.find<AppController>();
+  TextEditingController _meterNumber = TextEditingController();
 
   String? _selectedMerchant;
 
@@ -162,7 +165,7 @@ class _ElectricScreenState extends State<ElectricScreen> {
                           DropdownButtonFormField<String>(
                             value: _selectedMerchant,
                             decoration: InputDecoration(
-                              labelText: "Choose Betting Provider",
+                              labelText: "Choose Electric Company",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
@@ -189,7 +192,7 @@ class _ElectricScreenState extends State<ElectricScreen> {
                           DropdownButtonFormField<String>(
                             value: _selectedMeterNumber,
                             decoration: InputDecoration(
-                              labelText: "Choose Betting Provider",
+                              labelText: "Choose Meter Number",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
@@ -208,6 +211,32 @@ class _ElectricScreenState extends State<ElectricScreen> {
                               setState(() {
                                 _selectedMerchant = value;
                               });
+                            },
+                          ),
+                          const SizedBox(height: 20),
+                          TextFormField(
+                            controller: _meterNumber,
+                            keyboardType: TextInputType.phone,
+                            decoration: InputDecoration(
+                              prefix: const Row(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [Text("Enter your Meter Number")],
+                              ),
+                              labelText: "Meter Number",
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                              contentPadding: const EdgeInsets.symmetric(
+                                vertical: 15,
+                                horizontal: 16,
+                              ),
+                            ),
+                            validator: (value) {
+                              if (value!.length != 10) {
+                                return "Invalid phone number";
+                              }
+                              return null;
                             },
                           ),
                           const SizedBox(

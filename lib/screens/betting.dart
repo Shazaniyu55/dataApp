@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields, sized_box_for_whitespace
+
 import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
 import 'package:dataapp/widgets/bottomrectangularbtn.dart';
@@ -14,7 +16,7 @@ class BettingScreen extends StatefulWidget {
 
 class _BettingScreenState extends State<BettingScreen> {
   AppController appController = Get.find<AppController>();
-  TextEditingController _phoneContoller = TextEditingController();
+  final TextEditingController _phoneContoller = TextEditingController();
 
   String? _selectedMerchant;
 
@@ -195,11 +197,6 @@ class _BettingScreenState extends State<BettingScreen> {
                                 value: item['val'],
                                 child: Row(
                                   children: <Widget>[
-                                    Image.asset(
-                                      item['image']!,
-                                      width: 24,
-                                      height: 24,
-                                    ),
                                     const SizedBox(width: 10),
                                     Text(item['name']!),
                                   ],

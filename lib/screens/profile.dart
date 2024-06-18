@@ -86,6 +86,12 @@ class _ProfileState extends State<Profile> {
                         const Text(
                           'Name: ${'Shazaniyu Gbadamosi'}',
                         ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Email: ${'Shazaniyu@gmail.com'}',
+                        ),
                       ],
                     ),
                   ),

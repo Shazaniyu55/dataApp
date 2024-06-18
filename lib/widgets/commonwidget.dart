@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:dataapp/assistant/assistant.dart';
 import 'package:dataapp/constant/colors.dart';
 import 'package:dataapp/controller/appController.dart';
 import 'package:dataapp/model/walletBalace.dart';
@@ -21,6 +22,77 @@ class CommonWidgets {
   TextEditingController accountNameController = TextEditingController();
   TextEditingController accountNumController = TextEditingController();
   TextEditingController amountFiatController = TextEditingController();
+
+  void handlePayment() async {
+    // Define the API URL
+    String url = "http://127.0.0.1:8000/flutterwave/api/wallet_top_up/";
+
+    // Define the request body as a Map
+    Map<String, dynamic> requestBody = {
+      "tx_ref": "string",
+      "amount": "30",
+      "currency": "NGN",
+      "email": "shazaniyu@gmail.com",
+      "phone_number": "+2349074235666",
+      "name": "gbadamosi shazaniyu",
+      "firebase_token": "string",
+      "user_id": "string"
+    };
+
+    // Define any additional headers if needed
+    Map<String, String> headers = {
+      'Authorization':
+          'X-CSRFTOKEN: fC5GH8v29dKPlaNsWJEaswbBt5duC3V1p9kBNbAe7VnmsYEMaq8Kl59iQqoQrxvG',
+    };
+
+    var response = await RequestAssistant.sendPostRequest(url, requestBody,
+        headers: headers);
+    print(response);
+  }
+
+  // Future<void> handlePayment(BuildContext context) async {
+  //   final Customer customer = Customer(
+  //     name: "shazaniyu gbadamosi",
+  //     phoneNumber: "09074235666",
+  //     email: "shazaniyu@gmail.com",
+  //   );
+
+  //   final Flutterwave flutterwave = Flutterwave(
+  //     context: context,
+  //     publicKey:
+  //         "FLWPUBK_TEST-c3b9f15b0070b4151d09f1b7920000fa-X", // Replace with your Flutterwave public key
+  //     currency: "NGN",
+  //     txRef: DateTime.now().millisecondsSinceEpoch.toString(),
+  //     amount: "1000", // amount to charge
+  //     customer: customer,
+  //     paymentOptions: "card, payattitude, barter",
+  //     customization: Customization(title: "Test Payment"),
+  //     isTestMode: true,
+  //     redirectUrl: 'https://www.adaintech.com/',
+  //   );
+
+  //   try {
+  //     final ChargeResponse response = await flutterwave.charge();
+  //     if (response != null) {
+  //       if (response.status == "success") {
+  //         // Payment was successful
+  //         print("Transaction successful");
+  //         // Handle successful payment here
+  //       } else {
+  //         // Payment failed
+  //         print("Transaction failed");
+  //         // Handle failed payment here
+  //       }
+  //     } else {
+  //       // Payment was cancelled
+  //       print("Transaction cancelled");
+  //       // Handle cancelled payment here
+  //     }
+  //   } catch (error) {
+  //     print("Error: $error");
+  //     // Handle error here
+  //   }
+  // }
 
   static Widget showErrorMessage(String errorMessage) {
     return Padding(
@@ -249,9 +321,7 @@ class CommonWidgets {
                     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                   InkWell(
                     onTap: () {
-                      Get.back();
-                      // Get.to(const ChooseToken(fromPage: 'send',));
-                      //Get.to(WithdrawUSDT(selectedToken: selectedCoin.value,));
+                      handlePayment();
                     },
                     child: Container(
                       height: 100,

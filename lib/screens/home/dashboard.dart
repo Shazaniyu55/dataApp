@@ -93,6 +93,62 @@ class _DashboardState extends State<Dashboard> {
               ),
               ListTile(
                 leading: const Icon(
+                  Icons.hourglass_bottom_outlined,
+                  color: Colors.blueAccent,
+                  size: 30,
+                ),
+                title: const Text("Pricing"),
+                onTap: () {
+                  Get.to(const Profile());
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.settings,
+                  color: Colors.blueAccent,
+                  size: 30,
+                ),
+                title: const Text("Settings"),
+                onTap: () {
+                  Get.to(const Profile());
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.people_alt,
+                  color: Colors.blueAccent,
+                  size: 30,
+                ),
+                title: const Text("About us"),
+                onTap: () {
+                  Get.to(const Profile());
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.message_sharp,
+                  color: Colors.blueAccent,
+                  size: 30,
+                ),
+                title: const Text("Complaints"),
+                onTap: () {
+                  Get.to(const Profile());
+                },
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              ListTile(
+                leading: const Icon(
                   Icons.person_3,
                   color: Colors.blueAccent,
                   size: 30,
@@ -203,7 +259,8 @@ class _DashboardState extends State<Dashboard> {
                                     context, "images/data.png", "Buy Data", () {
                                   Get.to(const DataScreen());
                                 }),
-                                _buildCard(context, "images/light.png", "Bills",
+                                _buildCard(
+                                    context, "images/light.png", "Electric",
                                     () {
                                   Get.to(const ElectricScreen());
                                 }),

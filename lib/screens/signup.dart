@@ -9,6 +9,7 @@ import 'package:dataapp/widgets/bottomrectangularbtn.dart';
 import 'package:dataapp/widgets/commonwidget.dart';
 import 'package:dataapp/widgets/inputField.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -59,6 +60,29 @@ class _SignupScreenState extends State<SignupScreen> {
                 children: [
                   const SizedBox(
                     height: 30,
+                  ),
+                  Center(
+                    child: Stack(
+                      children: [
+                        const CircleAvatar(
+                          radius: 64,
+                          backgroundImage: NetworkImage(
+                              'https://i.stack.imgur.com/l60Hf.png'),
+                          backgroundColor: Colors.red,
+                        ),
+                        Positioned(
+                          bottom: -10,
+                          left: 80,
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.add_a_photo),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
