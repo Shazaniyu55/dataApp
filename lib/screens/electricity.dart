@@ -218,11 +218,6 @@ class _ElectricScreenState extends State<ElectricScreen> {
                             controller: _meterNumber,
                             keyboardType: TextInputType.phone,
                             decoration: InputDecoration(
-                              prefix: const Row(
-                                mainAxisSize: MainAxisSize.min,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [Text("Enter your Meter Number")],
-                              ),
                               labelText: "Meter Number",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(3),
