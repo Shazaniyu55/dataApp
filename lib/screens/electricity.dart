@@ -209,7 +209,7 @@ class _ElectricScreenState extends State<ElectricScreen> {
                             }).toList(),
                             onChanged: (value) {
                               setState(() {
-                                _selectedMerchant = value;
+                                _selectedMeterNumber = value;
                               });
                             },
                           ),
